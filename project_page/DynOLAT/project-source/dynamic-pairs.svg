@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="576" viewBox="0 0 640 576" role="img" aria-labelledby="title desc">
+  <title id="title">Static lighting sweep and dynamic alternating capture</title>
+  <desc id="desc">The top four frames hold one pose under Flat-lit, OLAT A, OLAT B, and OLAT C illumination. The bottom four frames alternate Flat-lit and OLAT A, with slightly raised arms in frames 1 and 2 and nearly overhead arms in frames 3 and 4. All OLAT sources are white, with offset positions and strong directional shading. Flat-lit illumination is broad and even.</desc>
+  <defs>
+    <linearGradient id="light-left" gradientUnits="userSpaceOnUse" x1="-45" y1="0" x2="45" y2="0">
+      <stop stop-color="#fafafa"/><stop offset=".3" stop-color="#c9c9c9"/><stop offset=".65" stop-color="#626262"/><stop offset="1" stop-color="#292929"/>
+    </linearGradient>
+    <linearGradient id="light-right" gradientUnits="userSpaceOnUse" x1="-45" y1="0" x2="45" y2="0">
+      <stop stop-color="#292929"/><stop offset=".35" stop-color="#626262"/><stop offset=".7" stop-color="#c9c9c9"/><stop offset="1" stop-color="#fafafa"/>
+    </linearGradient>
+    <linearGradient id="light-top" gradientUnits="userSpaceOnUse" x1="0" y1="-75" x2="0" y2="94">
+      <stop stop-color="#fafafa"/><stop offset=".3" stop-color="#bdbdbd"/><stop offset=".6" stop-color="#666666"/><stop offset="1" stop-color="#292929"/>
+    </linearGradient>
+    <g id="pose-held">
+      <circle cy="-55" r="17"/>
+      <path d="M-17-32 Q0-41 17-32 L37 17 25 23 13-1 19 43 14 92 1 92 0 46-1 92-14 92-19 43-13-1-25 23-37 17Z"/>
+    </g>
+    <g id="pose-lifting">
+      <circle cy="-55" r="17"/>
+      <path d="M-17-32 Q0-41 17-32 L41-46 49-35 29-14 14-4 19 43 14 92 1 92 0 46-1 92-14 92-19 43-14-4-29-14-49-35-41-46Z"/>
+    </g>
+    <g id="pose-raised">
+      <circle cy="-55" r="17"/>
+      <path d="M-17-32-37-58-45-82-56-78-49-46-28-8-17 8-19 43-26 91-12 94 0 48 12 94 26 91 19 43 17 8 28-8 49-46 56-78 45-82 37-58 17-32 Q0-41-17-32Z"/>
+    </g>
+    <g id="single-light">
+      <circle r="11" fill="#ffffff" opacity=".09"/>
+      <circle r="5.5" fill="#ffffff"/>
+    </g>
+    <g id="flat-lights" fill="#ffffff">
+      <circle cx="-22" r="3.5"/><circle r="3.5"/><circle cx="22" r="3.5"/>
+    </g>
+  </defs>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #dbe7ef; font-size: 20px; }
+    .heading { font-size: 24px; font-weight: 600; }
+    .subheading { font-size: 18px; fill: #92a9ba; }
+    .frame { font-size: 17px; fill: #92a9ba; text-anchor: middle; }
+    .caption { text-anchor: middle; }
+    .tile { fill: #101d27; stroke: #304655; }
+    .light-ray { fill: none; stroke: #ffffff; stroke-width: 1.5; opacity: .65; }
+  </style>
+  <rect width="640" height="576" rx="12" fill="#080e13"/>
+  <text x="24" y="33" class="heading">Static: one pose, changing lights</text>
+  <text x="24" y="59" class="subheading">Hold the pose across a full lighting sweep.</text>
+  <g class="frame">
+    <text x="92" y="88">Frame 1</text><text x="244" y="88">Frame 2</text><text x="396" y="88">Frame 3</text><text x="548" y="88">Frame 4</text>
+  </g>
+  <rect x="24" y="100" width="136" height="142" rx="8" class="tile"/>
+  <rect x="176" y="100" width="136" height="142" rx="8" class="tile"/>
+  <rect x="328" y="100" width="136" height="142" rx="8" class="tile"/>
+  <rect x="480" y="100" width="136" height="142" rx="8" class="tile"/>
+  <use href="#flat-lights" transform="translate(92 115)"/>
+  <use href="#single-light" transform="translate(194 115)"/>
+  <path d="M201 122 215 135" class="light-ray"/>
+  <use href="#single-light" transform="translate(446 115)"/>
+  <path d="M439 122 425 135" class="light-ray"/>
+  <use href="#single-light" transform="translate(567 115)"/>
+  <path d="M563 123 556 135" class="light-ray"/>
+  <use href="#pose-held" transform="translate(92 172) scale(.62)" fill="#c9c9c9"/>
+  <use href="#pose-held" transform="translate(244 172) scale(.62)" fill="url(#light-left)"/>
+  <use href="#pose-held" transform="translate(396 172) scale(.62)" fill="url(#light-right)"/>
+  <use href="#pose-held" transform="translate(548 172) scale(.62)" fill="url(#light-top)"/>
+  <g class="caption">
+    <text x="92" y="267">Flat-lit</text><text x="244" y="267">OLAT A</text><text x="396" y="267">OLAT B</text><text x="548" y="267">OLAT C</text>
+  </g>
+  <path d="M24 286 H616" stroke="#2e3e4b"/>
+  <text x="24" y="321" class="heading">Dynamic: motion, alternating lights</text>
+  <text x="24" y="347" class="subheading">Flat-lit and OLAT observations follow the motion.</text>
+  <g class="frame">
+    <text x="92" y="376">Frame 1</text><text x="244" y="376">Frame 2</text><text x="396" y="376">Frame 3</text><text x="548" y="376">Frame 4</text>
+  </g>
+  <rect x="24" y="388" width="136" height="142" rx="8" class="tile"/>
+  <rect x="176" y="388" width="136" height="142" rx="8" class="tile"/>
+  <rect x="328" y="388" width="136" height="142" rx="8" class="tile"/>
+  <rect x="480" y="388" width="136" height="142" rx="8" class="tile"/>
+  <use href="#flat-lights" transform="translate(92 403)"/>
+  <use href="#single-light" transform="translate(194 403)"/>
+  <path d="M201 410 215 423" class="light-ray"/>
+  <use href="#flat-lights" transform="translate(396 403)"/>
+  <use href="#single-light" transform="translate(498 403)"/>
+  <path d="M505 410 519 423" class="light-ray"/>
+  <use href="#pose-lifting" transform="translate(92 460) scale(.62)" fill="#c9c9c9"/>
+  <use href="#pose-lifting" transform="translate(244 460) scale(.62)" fill="url(#light-left)"/>
+  <use href="#pose-raised" transform="translate(396 460) scale(.62)" fill="#c9c9c9"/>
+  <use href="#pose-raised" transform="translate(548 460) scale(.62)" fill="url(#light-left)"/>
+  <g class="caption">
+    <text x="92" y="555">Flat-lit</text><text x="244" y="555">OLAT A</text><text x="396" y="555">Flat-lit</text><text x="548" y="555">OLAT A</text>
+  </g>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="title desc">
+  <title id="title">Light transport through a person</title>
+  <desc id="desc">Gold reflection, teal scattering, and purple self-occlusion paths show how light interacts with a person. Each path has a matching arrow and a separate, color-matched label connected by a thin leader.</desc>
+  <defs>
+    <marker id="arrow-reflection" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10" fill="#e9c178"/></marker>
+    <marker id="arrow-scattering" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10" fill="#83c7bc"/></marker>
+    <marker id="arrow-occlusion" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10" fill="#c093b6"/></marker>
+    <linearGradient id="mix"><stop stop-color="#e9c88e"/><stop offset=".5" stop-color="#669b9b"/><stop offset="1" stop-color="#739bb9"/></linearGradient>
+    <g id="person"><circle cy="-55" r="17"/><path d="M-17-32 Q0-41 17-32 L37 17 25 23 13-1 19 43 14 92 1 92 0 46-1 92-14 92-19 43-13-1-25 23-37 17Z"/></g>
+  </defs>
+  <style>
+    text { font-family: Arial, sans-serif; fill: #dbe7ef; font-size: 22px; }
+    .small { font-size: 19px; }
+    .heading { font-size: 24px; font-weight: 600; }
+    .light-path { fill: none; stroke-width: 2.5; stroke-linejoin: round; }
+    .leader { fill: none; stroke-width: 1.25; opacity: .8; }
+  </style>
+  <rect width="640" height="400" rx="12" fill="#080e13"/>
+  <text x="28" y="36" class="heading">Light paths shape appearance</text>
+  <use href="#person" transform="translate(320 214) scale(1.1)" fill="url(#mix)"/>
+  <circle cx="82" cy="115" r="15" fill="#e9c178"/>
+  <circle cx="480" cy="82" r="13" fill="#83c7bc"/>
+  <text x="31" y="83" class="small">Light A</text>
+  <text x="439" y="52" class="small">Light B</text>
+  <rect x="514" y="248" width="84" height="55" rx="8" fill="#101d27" stroke="#304655"/>
+  <text x="556" y="283" text-anchor="middle" class="small">View</text>
+  <path d="M96 119 301 154 512 268" class="light-path" stroke="#e9c178" marker-end="url(#arrow-reflection)"/>
+  <path d="M469 94 336 166 Q298 185 337 215 L513 278" class="light-path" stroke="#83c7bc" marker-end="url(#arrow-scattering)"/>
+  <path d="M101 126 284 237" class="light-path" stroke="#c093b6" marker-end="url(#arrow-occlusion)"/>
+  <path d="m276 229 16 16m0-16-16 16" stroke="#c093b6" stroke-width="3"/>
+  <path d="M287 238 351 278" class="light-path" stroke="#c093b6" stroke-dasharray="6 5" marker-end="url(#arrow-occlusion)"/>
+  <path d="M190 112 190 135" class="leader" stroke="#e9c178"/>
+  <text x="123" y="104" class="small" style="fill:#e9c178">Reflection</text>
+  <path d="M440 304 411 241" class="leader" stroke="#83c7bc"/>
+  <text x="398" y="329" class="small" style="fill:#83c7bc">Scattering</text>
+  <path d="M190 253 266 237" class="leader" stroke="#c093b6"/>
+  <text x="44" y="261" class="small" style="fill:#c093b6">Self-occlusion</text>
+  <text x="320" y="375" text-anchor="middle">Geometry + materials + visibility</text>
+</svg>
